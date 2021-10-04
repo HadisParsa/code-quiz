@@ -54,12 +54,12 @@ startTimer.addEventListener("click", function () {
   if (holdInterval === 0) {
     holdInterval = setInterval(function () {
       secondsLeft--;
-      currentTime.textContent = "Time: " + secondsLeft;
+      timerDiv.textContent = "Time: " + secondsLeft;
 
       if (secondsLeft <= 0) {
         clearInterval(holdInterval);
         allDone();
-        currentTime.textContent = "Time's up!";
+        timerDiv.textContent = "Time's up!";
       }
     }, 1000);
   }
